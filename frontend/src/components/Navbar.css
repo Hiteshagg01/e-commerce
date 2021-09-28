@@ -2,12 +2,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #000;
-    color: #fff;
-    padding: 1.5rem 2.5rem;
+    background-color: #171717;
+    color: #f4f4f4;
+    padding: 1rem 2rem;
     font-size: 1.25rem;
     align-items: center;
-    height: 6.75rem;
+    height: 80px;
     letter-spacing: 0.15rem;
 }
 
@@ -30,7 +30,7 @@
 
 .nav-link>a {
     text-decoration: none;
-    color: #fff;
+    color: #f4f4f4;
     padding: 0.5rem;
     border-radius: 1rem;
 }

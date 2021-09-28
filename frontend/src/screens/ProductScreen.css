@@ -1,1 +1,122 @@
+.product-screen {
+    display: flex;
+    max-width: 90rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    justify-content: space-between;
+}
 
+.img-product {
+    display: flex;
+    min-width: 53%;
+    margin: 1rem auto 0;
+}
+
+.img-product>img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.product-screen>hr {
+    margin: 2rem 0 1rem;
+}
+
+@media (min-width: 1200px) {
+    .product-screen>hr {
+        display: none;
+    }
+}
+
+.about-product {
+    display: flex;
+    flex-direction: column;
+    min-width: 28%;
+    margin: 1rem auto 0;
+    padding: 0 1rem 0;
+}
+
+.about-product>p {
+    margin-bottom: 1rem;
+}
+
+.about-name {
+    font-size: 1.75rem;
+}
+
+.about-stars {
+    color: #ffa41c;
+}
+
+.buy-product {
+    display: flex;
+    flex-direction: column;
+    min-width: 13%;
+    margin: 1rem 0 0;
+    border-radius: 1rem;
+    border: 2px solid rgba(3, 3, 3, 0.2);
+    padding: 1rem;
+}
+
+.buy-price {
+    color: #b12725;
+    font-weight: 600;
+}
+
+.buy-available {
+    color: #007600;
+    font-weight: 550;
+}
+
+.buy-quantity {
+    width: fit-content;
+    padding: 0.25rem;
+    background-color: #f5f5f5b6;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.buy-quantity>select {
+    background-color: transparent;
+    border: none;
+}
+
+.buy-product .add-to-cart {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #ffd814;
+    color: #000;
+    border-radius: 1rem;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buy-product .add-to-cart:hover {
+    background-color: #f9d919;
+    cursor: pointer;
+}
+
+.buy-product .buy-now {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #ffa41c;
+    color: #000;
+    border-radius: 1rem;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buy-product .buy-now:hover {
+    background-color: #f9a919;
+    cursor: pointer;
+}
+
+@media (max-width: 1442px) {
+    .product-screen {
+        flex-direction: column;
+        max-width: 90%;
+    }
+}

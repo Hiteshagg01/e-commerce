@@ -2,7 +2,7 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 
-function Navbar() {
+const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-brand">
@@ -20,7 +20,7 @@ function Navbar() {
                         <Link to="/cart" className="cart-nav-link">
                             <i className="fas fa-shopping-cart"></i>
                             Cart
-                            <span>7</span>
+                            <span>3</span>
                         </Link>
                     </li>
                 </ul>

@@ -1,4 +1,29 @@
 .home-screen {
     max-width: 90rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.products-list {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1535px) {
+    .products-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1150px) {
+    .products-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 756px) {
+    .products-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
