@@ -2,9 +2,9 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="footer-foot">
-            Footer
-        </div>
+        <footer className="footer-foot">
+            <p>© 2021, Shopping.com, Inc.</p>
+        </footer>
     )
 }
 

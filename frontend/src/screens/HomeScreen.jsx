@@ -10,6 +10,10 @@ const Homescreen = () => {
                 <Product />
                 <Product />
                 <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
             </div>
         </div>
     );

@@ -1,0 +1,9 @@
+.footer-foot {
+    background-color: #131921;
+    color: #fff;
+    min-height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

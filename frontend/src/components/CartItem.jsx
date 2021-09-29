@@ -9,9 +9,10 @@ const CartItem = () => {
                     <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1463&q=80" alt="iphone" />
                 </div>
                 <div className="cart-item-info">
-                    <p className="cart-item-name">iPhone 12</p>
+                    <h4 className="cart-item-name">iPhone 12</h4>
                     <br />
                     <p className="cart-item-availability">In Stock</p>
+                    <div className="text-seprator"></div>
                     <p className="cart-item-quantity">
                         Qty:
                         <select>
@@ -20,6 +21,7 @@ const CartItem = () => {
                             <option value="3">3</option>
                         </select>
                     </p>
+                    <div className="text-seprator"></div>
                     <p className="cart-item-remove">Delete</p>
                 </div>
                 <div className="cart-item-price">

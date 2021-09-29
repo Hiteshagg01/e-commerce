@@ -3,27 +3,32 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
+
+    const clickHandler = () => {
+        document.querySelector('.nav-links').classList.toggle('nav-links-active');
+        document.querySelector('.burger-menu').classList.toggle('on-toggle');
+
+    }
+
     return (
         <nav className="navbar">
-            <div className="navbar-brand">
-                <span>SHOPPING</span>
+            <div className="nav-brand">
+                <h3>SHOOPING</h3>
             </div>
-
-            <button className="navbar-toggle"><i className="fas fa-bars"></i></button>
-
-            <div className="navbar-links">
-                <ul className="navbar-nav">
-                    <li className="nav-link">
-                        <Link to="/">Shop More</Link>
-                    </li>
-                    <li className="nav-link">
-                        <Link to="/cart" className="cart-nav-link">
-                            <i className="fas fa-shopping-cart"></i>
-                            Cart
-                            <span>3</span>
-                        </Link>
-                    </li>
-                </ul>
+            <ul className="nav-links">
+                <li><Link to="/">
+                    <i className="fas fa-home"></i>
+                    Home
+                </Link></li>
+                <li><Link to="/cart">
+                    <i className="fas fa-shopping-cart"></i>
+                    Cart
+                </Link></li>
+            </ul>
+            <div className="burger-menu" onClick={clickHandler}>
+                <div className="burger-menu-line-1"></div>
+                <div className="burger-menu-line-2"></div>
+                <div className="burger-menu-line-3"></div>
             </div>
         </nav>
     );
