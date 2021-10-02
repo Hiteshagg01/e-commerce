@@ -12,11 +12,12 @@ export default function cartReducers(state = { cartItems: [] }, action) {
 
         case cartActions.REMOVE_FROM_CART:
             return {
+                ...state,
                 cartItems: state.cartItems.filter(x => x.id !== action.payload.id)
             }
 
         case cartActions.RESET_CART:
-            return []
+            return {}
 
         default:
             return state

@@ -1,17 +1,19 @@
-import { createStore, combineReducers } from 'redux';
-// import { composeWithDevTools } from 'redux-devtools-extension'
-import cartReducer from './reducers/cartReducer';
-import productsReducer from './reducers/productsReducer';
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import ReduxThunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import cartReducer from './reducers/cartReducer'
+import productsReducer from './reducers/productsReducer'
+import productDetailsReducer from './reducers/productDetailsReducer'
 
 const shoppingApp = combineReducers({
     cart: cartReducer,
-    products: productsReducer
+    products: productsReducer,
+    productDetails: productDetailsReducer
 });
 
 const store = createStore(
     shoppingApp,
-    // composeWithDevTools(applyMiddleware(...middleware))
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    composeWithDevTools(applyMiddleware(ReduxThunk))
 )
 
 export default store;

@@ -80,6 +80,10 @@
     border: none;
 }
 
+.buy-quantity>select:focus {
+    border: hidden;
+}
+
 .buy-product .add-to-cart {
     padding: 0.5rem;
     margin-bottom: 1rem;

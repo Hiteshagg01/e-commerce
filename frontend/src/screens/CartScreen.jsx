@@ -8,8 +8,6 @@ const CartScreen = () => {
                 <h1>Shopping Cart</h1>
                 <hr />
                 <CartItem />
-                <CartItem />
-                <CartItem />
                 <p>Total</p>
             </div>
             <div className="sub-total">

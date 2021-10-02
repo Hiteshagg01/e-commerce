@@ -1,6 +1,6 @@
 import * as productsActions from '../constants/productsActionTypes';
 
-export default function productsReducer(state = { products: [] }, action) {
+export default function productsReducer(state = { loading: true, products: [] }, action) {
     switch (action.type) {
         case productsActions.GET_PRODUCTS_REQUEST:
             return {

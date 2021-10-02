@@ -1,4 +1,4 @@
-export default [
+const products = [
     {
         name: "PlayStation 5",
         imageUrl:
@@ -54,3 +54,5 @@ export default [
         countInStock: 10,
     },
 ];
+
+module.exports = products
