@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="nav-brand">
-                <h3>SHOOPING</h3>
+                <h3>Amazon</h3>
             </div>
             <ul className="nav-links">
                 <li><Link to="/">

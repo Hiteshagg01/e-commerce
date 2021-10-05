@@ -1,36 +1,39 @@
-import './CartItem.css';
+import './CartItem.css'
 
 
-const CartItem = () => {
-    return (
-        <>
-            <div className="cart-item">
-                <div className="cart-item-img">
-                    <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1463&q=80" alt="iphone" />
-                </div>
-                <div className="cart-item-info">
-                    <h4 className="cart-item-name">iPhone 12</h4>
-                    <br />
-                    <p className="cart-item-availability">In Stock</p>
-                    <div className="text-seprator"></div>
-                    <p className="cart-item-quantity">
-                        Qty:
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </p>
-                    <div className="text-seprator"></div>
-                    <p className="cart-item-remove">Delete</p>
-                </div>
-                <div className="cart-item-price">
-                    <p>$1,999</p>
-                </div>
+const CartItem = ({ cartItem, removeFromCartHandler, changeQtyHandler }) => {
+
+    return <>
+        <div className="cart-item">
+            <div className="cart-item-img">
+                <img src={cartItem.imageUrl} alt={cartItem.name} />
             </div>
-            <hr />
-        </>
-    )
+            <div className="cart-item-info">
+                <h4 className="cart-item-name">{cartItem.name}</h4>
+                <br />
+                {cartItem.countInStock > 0 ?
+                    <p className="cart-item-availability">In Stock</p> :
+                    <p className="cart-item-availability">Out of Stock</p>
+                }
+                <div className="text-seprator"></div>
+                <p className="cart-item-quantity">
+                    <select value={cartItem.qty} onChange={e => changeQtyHandler(cartItem.id, Number(e.target.value))}>
+                        <option value="1">Qty: 1</option>
+                        <option value="2">Qty: 2</option>
+                        <option value="3">Qty: 3</option>
+                    </select>
+                </p>
+                <div className="text-seprator"></div>
+                <p>
+                    <button className="cart-item-remove" onClick={() => removeFromCartHandler(cartItem.id)}><i className="far fa-trash-alt"></i> Delete</button>
+                </p>
+            </div>
+            <div className="cart-item-price">
+                <p>${cartItem.price}</p>
+            </div>
+        </div>
+        <hr />
+    </>
 }
 
 

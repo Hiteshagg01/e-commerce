@@ -19,7 +19,7 @@ const ProductScreen = ({ match }) => {
     }, [dispatch, match])
 
     const addToCartHandler = () => {
-        dispatch(addToCart(details[0]._id, qty, details[0].price))
+        dispatch(addToCart(details[0]._id, qty))
     }
     return (
         <div className="product-screen">
@@ -32,11 +32,14 @@ const ProductScreen = ({ match }) => {
                     <div className="about-product">
                         <p className="about-name">{details[0].name}</p>
                         <p className="about-stars"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i></p>
+                        <hr />
+                        <p>Price: <span className="buy-price"> ${details[0].price}</span> </p>
                         <p className="about-description">
                             <strong>About this item:</strong>
                             <br />
                             {details[0].description}
                         </p>
+
                     </div>
                     <div className="buy-product">
                         <p className="buy-price">${details[0].price}</p>

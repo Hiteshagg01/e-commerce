@@ -29,6 +29,15 @@
     display: inline-flex;
 }
 
+.cart-item-remove {
+    background: transparent;
+    border: none;
+}
+
+.cart-item-remove:hover {
+    cursor: pointer;
+}
+
 .cart-item-price {
     min-width: 13%;
     padding: 1rem;

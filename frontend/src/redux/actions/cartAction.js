@@ -1,12 +1,20 @@
 import * as cartActions from '../constants/cartActionTypes'
-// import axios from 'axios'
+import axios from 'axios'
 
-export const addToCart = (id, qty, price) => async (dispatch) => {
+export const addToCart = (id, qty) => async (dispatch) => {
     try {
+
+        const { data } = await axios.get(`/api/products/${id}`)
+
         dispatch({
             type: cartActions.ADD_TO_CART,
             payload: {
-                id, qty, price
+                id: data[0]._id,
+                name: data[0].name,
+                imageUrl: data[0].imageUrl,
+                price: data[0].price,
+                countInStock: data[0].countInStock,
+                qty
             }
         })
 

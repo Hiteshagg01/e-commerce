@@ -25,7 +25,7 @@
 }
 
 .proceed-to-checkout {
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
     margin-top: 1rem;
     background-color: #ffd814;
     color: #000;
@@ -37,7 +37,7 @@
 }
 
 .proceed-to-checkout:hover {
-    background-color: #f9d919;
+    opacity: 0.75;
     cursor: pointer;
 }
 

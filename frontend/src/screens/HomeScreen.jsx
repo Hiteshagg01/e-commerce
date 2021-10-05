@@ -16,10 +16,12 @@ const Homescreen = () => {
 
     return (
         <div className="home-screen">
-            <h1>Home Screen</h1>
             <div className="products-list">
                 {loading ?
-                    <h1>Loading...</h1> : error ? <h2>{error}</h2> : products.map(product => <Product key={product._id} data={product} />)
+                    <h1>Loading...</h1> :
+                    error ?
+                        <h2>{error}</h2> :
+                        products.map(product => <Product key={product._id} data={product} />)
                 }
             </div>
         </div>

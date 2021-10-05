@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 //Components
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 // Screens
 import HomeScreen from './screens/HomeScreen'
@@ -20,9 +20,9 @@ const App = () => {
         <Route exact path="/products/:id" component={ProductScreen} />
         <Route exact path="/cart" component={CartScreen} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
-  );
+  )
 }
 
 

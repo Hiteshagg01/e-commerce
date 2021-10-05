@@ -30,7 +30,7 @@
 .about-product {
     display: flex;
     flex-direction: column;
-    min-width: 28%;
+    min-width: 26%;
     margin: 1rem auto 0;
     padding: 0 1rem 0;
 }
@@ -50,7 +50,7 @@
 .buy-product {
     display: flex;
     flex-direction: column;
-    min-width: 13%;
+    min-width: 15%;
     margin: 1rem 0 0;
     border-radius: 1rem;
     border: 2px solid rgba(3, 3, 3, 0.2);
@@ -59,12 +59,13 @@
 
 .buy-price {
     color: #b12725;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .buy-available {
     color: #007600;
-    font-weight: 550;
+    font-weight: 500;
 }
 
 .buy-quantity {
